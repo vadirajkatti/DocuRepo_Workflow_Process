@@ -1,0 +1,8 @@
+flowchart LR
+ A[Upload/API] --> B[Job Queue / Orchestrator]
+ B --> C[Workers]
+ B --> D[Retry / DLQ]
+ C --> E[Parse]
+ C --> F[Validate]
+ C --> G[Transform]
+ C --> H[(Result Store)]
